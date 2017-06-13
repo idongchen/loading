@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading{
+            position: absolute;
+            width:120px;
+            height:120px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        .box1,.box2,.box3,.box4{
+            width:50px;
+            height:50px;
+            position: absolute;
+            background:#000;
+        }
+        .box1{
+            left:0;
+            top:0;
+            animation:box1_animate 1s infinite;
+        }
+        .box2{
+            left:60px;
+            top:0;
+            animation:box2_animate 1s infinite;
+        }
+        .box3{
+            left:0;
+            top:60px;
+            animation:box3_animate 1s infinite;
+        }
+        .box4{
+            left:60px;
+            top:60px;
+            animation:box4_animate 1s infinite;
+        }
+        @keyframes box1_animate{
+            0%{
+                
+            }
+            100%{
+                left:60px;
+            }
+        }
+        @keyframes box2_animate{
+            0%{
+                
+            }
+            100%{
+                left:60px;
+                top:60px;
+            }
+        }
+        @keyframes box3_animate{
+            0%{
+                
+            }
+            100%{
+                left:0;
+                top:0;
+            }
+        }
+        @keyframes box4_animate{
+            0%{
+                
+            }
+            100%{
+                left:0;
+                top:60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

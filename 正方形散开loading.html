@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading{
+            position: absolute;
+            left:50%;
+            top:50%;
+        }
+        .box{
+            width:30px;
+            height:30px;
+            background: #f66;
+            position: absolute;
+            animation:box_animate 1s infinite;
+        }
+        .box1{
+            left:0;
+            top:0;
+        }
+        .box2{
+            left:35px;
+            top:0px;
+            animation-delay:200ms;
+        }
+        .box3{
+            left:70px;
+            top:0px;
+            animation-delay:400ms;
+        }
+        .box4{
+            left:0px;
+            top:35px;
+            animation-delay:200ms;
+        }
+        .box5{
+            left:35px;
+            top:35px;
+            animation-delay:600ms;
+        }
+        .box6{
+            left:70px;
+            top:35px;
+            animation-delay:200ms;
+        }
+        .box7{
+            left:0px;
+            top:70px;
+            animation-delay:400ms;
+        }
+        .box8{
+            left:35px;
+            top:70px;
+            animation-delay:200ms;
+        }
+        .box9{
+            left:70px;
+            top:70px;
+        }
+        @keyframes box_animate{
+            0%{
+
+            }
+            100%{
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <div class="box4 box"></div>
+        <div class="box5 box"></div>
+        <div class="box6 box"></div>
+        <div class="box7 box"></div>
+        <div class="box8 box"></div>
+        <div class="box9 box"></div>
+    </div>
+</body>
+</html>

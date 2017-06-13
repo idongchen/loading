@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+        }
+        .box1,.box2,.box3{
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            float:left;
+            margin-right:10px;
+            background:#f66;
+            /*animation:loading-animate 1s infinite;*/
+        }
+        .box1{
+            animation: loading-animate 1s 300ms infinite;
+        }
+        .box2{
+            animation: loading-animate 1s 600ms infinite;
+        }
+        .box3{
+            animation: loading-animate 1s 1s infinite;
+        }
+        @keyframes loading-animate{
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
