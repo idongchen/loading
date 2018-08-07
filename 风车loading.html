@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .loading{
+            position: absolute;
+            width:60px;
+            height:60px;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .box1,.box2,.box3,.box4{
+            /*width:50px;
+            height:50px;
+            background:#000;*/
+            position: absolute;
+
+        }
+        .box1{
+            left:0;
+            top:0;
+            animation:box1_animate 1s infinite;
+            border-color: #f66 #f66 transparent transparent;
+
+
+        }
+        .box2{
+            left:30px;
+            top:0;
+            animation:box2_animate 1s infinite;
+            border-color: transparent #f66 #f66 transparent;
+
+        }
+        .box3{
+            left:0;
+            top:30px;
+            animation:box3_animate 1s infinite;
+            border-color: #f66 transparent transparent #f66;
+
+        }
+        .box4{
+            left:30px;
+            top:30px;
+            animation:box4_animate 1s infinite;
+            border-color: transparent transparent #f66 #f66;
+
+        }
+        .triangle-top{
+            width: 0px;
+            height: 0px;
+            overflow: hidden;/*处理IE6最小高度*/
+            border-width: 20px;
+            /*border-color: transparent transparent #ccc transparent ;*/
+            /*border-color: #f66 #66f #ccc #f6f ;*/
+            /*transparent全透明黑色(black)，即一个类似rgba(0,0,0,0)*/
+            border-style: dashed dashed solid dashed;
+            transform: scaleX(0.666);
+        }
+        @keyframes box1_animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                left:30px;
+                transform: rotate(90deg);
+            }
+        }
+        @keyframes box2_animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                left:30px;
+                top:30px;
+                transform: rotate(90deg);
+            }
+        }
+        @keyframes box3_animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                left:0;
+                top:0;
+                transform: rotate(90deg);
+            }
+        }
+        @keyframes box4_animate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                left:0;
+                top:30px;
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="box1 triangle-top"></div>
+        <div class="box2 triangle-top"></div>
+        <div class="box3 triangle-top"></div>
+        <div class="box4 triangle-top"></div>
+    </div>
+</body>
+</html>
